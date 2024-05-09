@@ -6,6 +6,28 @@ function App() {
     <div className="App">
       
       <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+
+
+
+      
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
+      <SocialCardParent />
     </div>
   );
 }

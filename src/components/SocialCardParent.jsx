@@ -1,15 +1,17 @@
 import React from "react";
 import SocialCardForm from "./SocialCardForm";
 import SocialCardDisplay from "./SocialCardDisplay";
+import { faker } from "@faker-js/faker";
 
 export default class SocialCardParent extends React.Component {
 	constructor(){
 		super();
 
 		this.state = {
-			currentlyEditing: true,
+			currentlyEditing: false,
 			content: "Default content",
-			imageUrl: ""
+			imageUrl: faker.image.urlPicsumPhotos(),
+			hoverImageUrl: faker.image.urlPicsumPhotos()
 			
 		}
 	}
@@ -30,9 +32,9 @@ export default class SocialCardParent extends React.Component {
 
 	render(){
 		if (this.state.currentlyEditing){
-			return <SocialCardForm toggleEditMode={this.toggleEditMode} setParentState={this.updateStateProperty} content={this.state.content} imageUrl={this.state.imageUrl}  />
+			return <SocialCardForm toggleEditMode={this.toggleEditMode} setParentState={this.updateStateProperty} content={this.state.content} imageUrl={this.state.imageUrl}  hoverImageUrl={this.state.hoverImageUrl} />
 		} else {
-			return <SocialCardDisplay toggleEditMode={this.toggleEditMode} content={this.state.content} imageUrl={this.state.imageUrl}  />
+			return <SocialCardDisplay toggleEditMode={this.toggleEditMode} content={this.state.content} imageUrl={this.state.imageUrl} hoverImageUrl={this.state.hoverImageUrl}  />
 		}
 	}
 }
